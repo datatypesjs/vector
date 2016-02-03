@@ -1,5 +1,5 @@
 {
-  "name": "vector",
+  "name": "@datatypes/vector",
   "version": "0.2.0",
   "description": "Class for 3D vectors",
   "main": "index.js",
