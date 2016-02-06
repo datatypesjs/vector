@@ -26,6 +26,8 @@ class Vector
 
 	toJSON: () -> @toObject()
 
+	clone: () -> new Vector @x, @y, @z
+
 	add: (vector) ->
 		@x += vector.x
 		@y += vector.y

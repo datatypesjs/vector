@@ -28,6 +28,13 @@ runTest 'Outputs JSON', (test) ->
 	test.same(JSON.stringify(vector), '{"x":1,"y":2,"z":3}')
 
 
+runTest 'Gets cloned', (test) ->
+	vector = new Vector(1, 2, 3)
+	clonedVector = vector.clone()
+	vector.x = 9
+	test.same(JSON.stringify(clonedVector), '{"x":1,"y":2,"z":3}')
+
+
 runTest 'Adds a vector', (test) ->
 	vectorA = new Vector(1, 2, 3)
 	vectorB = new Vector(4, 5, 6)
