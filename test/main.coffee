@@ -24,6 +24,7 @@ runTest 'Instantiates a vector from an array', (test) ->
 
 runTest 'Outputs JSON', (test) ->
 	vector = new Vector(1, 2, 3)
+	vector.uselessProperty = 'useless'
 	test.same(JSON.stringify(vector), '{"x":1,"y":2,"z":3}')
 
 

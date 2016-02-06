@@ -24,7 +24,7 @@ class Vector
 			z: @z
 		}
 
-	toJSON: @toObject
+	toJSON: () -> @toObject()
 
 	add: (vector) ->
 		@x += vector.x
