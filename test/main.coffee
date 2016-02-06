@@ -22,6 +22,11 @@ runTest 'Instantiates a vector from an array', (test) ->
 	test.same(vector.toObject(), {x: 1, y: 2, z: 3})
 
 
+runTest 'Outputs JSON', (test) ->
+	vector = new Vector(1, 2, 3)
+	test.same(JSON.stringify(vector), '{"x":1,"y":2,"z":3}')
+
+
 runTest 'Adds a vector', (test) ->
 	vectorA = new Vector(1, 2, 3)
 	vectorB = new Vector(4, 5, 6)
