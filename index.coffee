@@ -1,3 +1,5 @@
+calculateLength = (x, y, z) -> Math.sqrt (x * x) + (y * y) + (z * z)
+
 class Vector
 	constructor: (@x = 0, @y = 0, @z = 0) ->
 		@isNormalized = undefined
@@ -56,11 +58,14 @@ class Vector
 
 		return @
 
-	length: () ->
-		return Math.sqrt (@x * @x) + (@y * @y) + (@z * @z)
+	length: () -> calculateLength @x, @y, @z
 
 	euclideanDistanceTo: (vector) ->
-		return @subtract(vector).length()
+		return calculateLength(
+			@x - vector.x
+			@y - vector.y
+			@z - vector.z
+		)
 
 	normalize: () ->
 		@isNormalized = true

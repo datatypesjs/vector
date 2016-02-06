@@ -75,9 +75,11 @@ runTest 'Returns a vector\'s length', (test) ->
 
 runTest 'Returns the euclidian distance to a vector', (test) ->
 	vectorA = new Vector(4, 2, 0)
+	vectorAReference = vectorA.clone()
 	vectorB = new Vector(3, 5, 7)
 	expectedDistance = 7.681145747868608
 	test.same(vectorA.euclideanDistanceTo(vectorB), expectedDistance)
+	test.same(vectorA, vectorAReference)
 
 
 runTest 'Normalizes a vector', (test) ->
